@@ -1,0 +1,110 @@
+:root {
+    --darkBlue: #0e0220;
+    --brightPink: #e40475;
+    --brightBlue: #48e0e4;
+    --whiteBlue: #d7fbf6;
+}
+
+body {
+    background-color: var(--darkBlue);
+    color: var(--whiteBlue);
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.thick {
+    border: 2px solid  var(--whiteBlue);
+}
+
+.outline {
+    border-style: solid;
+    border-color: black;
+    border-radius:10px;
+}
+
+#itemContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.centered {
+    text-align: center;
+    margin: auto;
+}
+.cardClass {
+    background-color: var(--brightPink);
+    color:  var(--whiteBlue);
+    font-weight: bold;
+}
+.cardClass:hover {
+    box-shadow: 0 0 20px var(--brightBlue);
+    cursor: pointer;
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+.addMoney {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.addGroup {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 5px;
+}
+#messageArea, #purchase {
+    width: 50%;
+}
+#itemIDBody {
+    width: 44%;
+}
+#changeButton, #changeBox {
+    width: 50%;
+    margin-top: 5px;
+}
+
+input[type="text"], textarea {
+    color: var(--whiteBlue);
+    background-color: #250f3b;
+    border-style: solid;
+    border-color: var(--brightBlue);
+    border-radius: 0.5em;
+}
+
+.btn-money {
+    background-color: var(--brightBlue);
+}
+
+.btn-money:hover {
+    background-color: #2e979b;
+    color: var(--whiteBlue);
+}
+
+.btn-primary {
+    background-color: var(--brightBlue);
+    color: black;
+}
+.btn-primary:hover {
+    background-color: #2e979b;
+    color: var(--whiteBlue);
+}
+
+.btn-danger {
+    background-color: var(--brightPink);
+}
+.btn-danger:hover {
+    background-color:#800241;
+}
+
+

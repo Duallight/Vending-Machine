@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import React from 'react';
+import PurchaseContainer from './components/PurchaseContainer';
+import ItemContainer from './components/ItemContainer';
+import MoneyContainer from './components/MoneyContainer';
+import ChangeContainer from './components/ChangeContainer';
+
+class App extends React.Component {
+  render() {
+    return (
+        <>
+            <div>
+                <h1 style={{fontFamily: 'Bangers'}}>Vending Machine</h1>
+            </div>
+            <hr className="thick"/>
+            <div id = "activeContainer" className="container-fluid">
+                <div className="row">
+                    <ItemContainer/>
+                    <div id = "formArea" className="container col-md-4">
+                        <MoneyContainer/>
+                        <hr className="thick"/>
+                        <PurchaseContainer/>
+                        <hr className="thick"/>
+                        <ChangeContainer/>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+  }
 }
 
 export default App;
